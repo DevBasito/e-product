@@ -6,6 +6,14 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    colors: {
+      'Orange': "hsl(26, 100%, 55%)",
+      'PaleOrange': "hsl(25, 100%, 94%)"
+    },
+    fontFamily: {
+      sans: 'Kumbh'
+      
+    }
   },
   plugins: [],
 }

@@ -30,11 +30,11 @@ const Nav = () => {
     return (
 
         <>
-            <div className="flex flex-row">
+            <div className="flex flex-row mb-3 ">
                 <div className="basis-1/2 md:basis-1/4 flex flex-row items-center md:justify-between">
 
                     <div className="md:hidden"><img src={Images.mobileMenu} alt="" onClick={openMenu} /></div>
-                    <div className="px-5 md:px-0">Sneakers</div>
+                    <div className="px-5 md:px-0 "><img src={Images.Logo} alt="" /></div>
                 </div>
                 <div className="md:basis-2/4  md:flex items-center hidden ">
                     <ul >
@@ -54,7 +54,7 @@ const Nav = () => {
             </div>
 
             <div className="h-screen  absolute top-0 left-0 z-50  w-1/2 py-5 hidden " id="menu">
-                <img src={Images.closeMenu} alt="" className="px-8 my-4 pb-4" onClick={openMenu} />
+                <img src={Images.closeMenu} alt="" className="px-8 my-3 pb-4" onClick={openMenu} />
                 <ul >
                     <li className=" px-8 my-4">Collections</li>
                     <li className=" px-8 my-4" >Men</li>

@@ -7,11 +7,11 @@ const ProductPage =() => {
 
     return(
         <>
-        <div className="md:flex md:flex-row md:px-10 md:pt-14 ">
-            <div className="md:basis-1/2">
+        <div className="md:flex md:flex-row md:px-20 md:pt-14">
+            <div className="md:basis-1/2 ">
             <Carousel />
             </div>
-            <div className="md:basis-1/2">
+            <div className="md:basis-1/2 ">
             <ProductInfo />
             </div>
             

@@ -37,7 +37,7 @@ const Nav = () => {
                     <div className="px-5 md:px-0 "><img src={Images.Logo} alt="" /></div>
                 </div>
                 <div className="md:basis-2/4  md:flex items-center hidden ">
-                    <ul >
+                    <ul className="opacity-75" >
                         <li className="float-left px-3  ">Collections</li>
                         <li className="float-left px-3" >Men</li>
                         <li className="float-left px-3">Women</li>
@@ -55,7 +55,7 @@ const Nav = () => {
 
             <div className="h-screen  absolute top-0 left-0 z-50  w-1/2 py-5 hidden " id="menu">
                 <img src={Images.closeMenu} alt="" className="px-8 my-3 pb-4" onClick={openMenu} />
-                <ul >
+                <ul className="">
                     <li className=" px-8 my-4">Collections</li>
                     <li className=" px-8 my-4" >Men</li>
                     <li className=" px-8 my-4">Women</li>

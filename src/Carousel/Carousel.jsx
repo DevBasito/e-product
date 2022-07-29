@@ -46,7 +46,7 @@ const Carousel = () => {
 
 
             {/* Desktop Carousel */}
-            <div className="w-2/3  hidden md:block ">
+            <div className=" h-2/4 w-11/12  hidden md:block ">
                 <div id="carouselExampleIndicators" className="carousel slide  " data-bs-ride="carousel">
 
                     {/* <!-- Slides --> */}

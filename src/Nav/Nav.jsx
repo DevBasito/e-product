@@ -50,8 +50,11 @@ const Nav = () => {
                     <div className="basis 1/2 px-3 md:px-5 flex items-center"> <img src={Images.avatar} alt="" width={40} /></div>
                 </div>
 
+                
+
 
             </div>
+            <hr className="font-bold opacity-75" />
 
             <div className="h-screen  absolute top-0 left-0 z-50  w-1/2 py-5 hidden " id="menu">
                 <img src={Images.closeMenu} alt="" className="px-8 my-3 pb-4" onClick={openMenu} />

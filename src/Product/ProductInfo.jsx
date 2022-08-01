@@ -34,21 +34,21 @@ const ProductInfo = () => {
 
                 <del className="opacity-75 "> $250.00</del>
 
-                <div className="my-4 justify-center text-center md:text-leftDSAAAAAAAAAAdDDDDDDDDDDDDDD ">
+                <div className="my-4  ">
                     
-                    <span className="bg-Lightgrey rounded-lg  py-2 mr-3 items-center">
-                        <button className="px-4 md:px-3 " onClick={cartMinus}><img src={Images.minus} alt="" /></button>
+                    <span className="bg-Lightgrey rounded-lg  py-2 mr-3 mx-auto ">
+                        <button className=" px-4 " onClick={cartMinus}><img src={Images.minus} alt="" /></button>
 
-                        <span className="px-2">{cartItems}</span>
+                        <span className="px-5 md:px-3  ">{cartItems}</span>
 
-                        <button className="md:px-3 px-4" onClick={cartPlus}><img src={Images.plus} alt="" /></button>
+                        <button className=" px-4 " onClick={cartPlus}><img src={Images.plus} alt="" /></button>
 
                     </span>
                     
                     <br className="md:hidden" />
                     <br className="md:hidden"/>
                     
-                    <button className="bg-Orange rounded-lg  py-2 px-7 md:px-4 text-white  "><img src={Images.cart_w} alt="" className="inline-block mx-1" /> <span className="">Add to Cart</span> </button>
+                    <button className="bg-Orange rounded-lg  py-2 px-7 md:px-5 text-white  "><img src={Images.cart_w} alt="" className="inline-block mx-1" /> <span className="">Add to Cart</span> </button>
                     
                 </div>
 

@@ -22,7 +22,7 @@ const Nav = () => {
         else {
             menu.className = "hidden";
             // app.style.opacity = 1;
-        } 
+        }
 
 
     }
@@ -30,6 +30,7 @@ const Nav = () => {
     return (
 
         <>
+
             <div className="flex flex-row mb-3 ">
                 <div className="basis-1/2 md:basis-1/4 flex flex-row items-center md:justify-between">
 
@@ -50,11 +51,14 @@ const Nav = () => {
                     <div className="basis 1/2 px-3 md:px-5 flex items-center"> <img src={Images.avatar} alt="" width={40} /></div>
                 </div>
 
-                
 
 
             </div>
-            <hr className="font-bold opacity-75" />
+            <div className=" px-5 mt-4 ">
+            <hr className=" opacity-7  " />
+            </div>
+
+
 
             <div className="h-screen  absolute top-0 left-0 z-50  w-1/2 py-5 hidden " id="menu">
                 <img src={Images.closeMenu} alt="" className="px-8 my-3 pb-4" onClick={openMenu} />

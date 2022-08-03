@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import Images from "../asset";
+import Cart from "./Cart";
 
 
-const Nav = () => {
+const Nav = (props) => {
     const [showmenu, setShowmenu] = useState(false)
+    const [showcart, setShowcart] = useState(false)
 
     const openMenu = () => {
 
@@ -27,6 +29,21 @@ const Nav = () => {
 
     }
 
+    const openCart = () => {
+        const cart = document.getElementById("cart");
+        console.log(showcart)
+        setShowcart(!showcart);
+
+        if (showcart) {
+            console.log("show")
+            cart.style.display = "block"
+        }
+        else {
+            cart.style.display = "none"
+            console.log("null")
+        }
+    }
+
     return (
 
         <>
@@ -47,7 +64,10 @@ const Nav = () => {
                     </ul>
                 </div>
                 <div className="basis-1/2 md:basis-1/4 flex flex-row justify-end md:justify-center  ">
-                    <div className="basis 1/2 px-3 md:px-5  flex items-center"> <img src={Images.cart} alt="" /></div>
+                    <div className="basis 1/2 px-3 md:px-5  flex items-center">
+                        <span className="badge rounded-pill bg-Orange absolute top-2.5 hidden " id="badge">{props.badgeno}</span>
+                        <img src={Images.cart} alt="" onClick={openCart} />
+                    </div>
                     <div className="basis 1/2 px-3 md:px-5 flex items-center"> <img src={Images.avatar} alt="" width={40} /></div>
                 </div>
 
@@ -55,7 +75,7 @@ const Nav = () => {
 
             </div>
             <div className=" px-5 mt-4 ">
-            <hr className=" opacity-7  " />
+                <hr className=" opacity-7  " />
             </div>
 
 
@@ -69,6 +89,12 @@ const Nav = () => {
                     <li className=" px-8 my-4"> About</li>
                     <li className=" px-8 my-4"> Contact</li>
                 </ul>
+            </div>
+
+
+            {/* Cart Component */}
+            <div id="cart" className="hidden">
+                <Cart />
             </div>
         </>
     )

@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="px-8 py-3 md:px-20 md:py-3 font-sans" id='App'>
-      <Nav className=""/>
+      <Nav/>
       <ProductPage/>
      
     </div>

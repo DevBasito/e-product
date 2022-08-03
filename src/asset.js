@@ -37,4 +37,4 @@ const Images = {
     minus
 }
 
-export default Images
+export default Images 

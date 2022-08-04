@@ -44,10 +44,10 @@ const ProductInfo = (props) => {
                     $125.00
                     <span className="px-1 mr-5 text-sm bg-PaleOrange  font-thin text-Orange rounded ">50%</span>
                     <br className=" hidden md:block" />
-                    
+
                     <del className="opacity-75 text-sm float-right md:float-left items-center"> $250.00</del>
                 </p>
-                
+
 
                 {/* Add to Cart button for mobile */}
                 <div className="my-4 text-center md:hidden">
@@ -64,7 +64,10 @@ const ProductInfo = (props) => {
                     <br className="md:hidden" />
                     <br className="md:hidden" />
 
-                    <button className="bg-Orange rounded-lg  py-3 px-5  text-white  "><img src={Images.cart_w} alt="" className="inline-block mx-1" /> <span className="">Add to Cart</span> </button>
+                    <button className="bg-Orange rounded-lg  py-3 px-5  text-white  " onClick={addToCart} >
+                        <img src={Images.cart_w} alt="" className="inline-block mx-1" />
+                        <span className="">Add to Cart</span>
+                    </button>
 
                 </div>
 
@@ -81,11 +84,11 @@ const ProductInfo = (props) => {
 
                     </span>
 
-                    
+
 
                     <button className="bg-Orange rounded-lg  py-3 px-5 text-white  " onClick={addToCart}>
                         <img src={Images.cart_w} alt="" className="inline-block mx-1" />
-                         <span className="">Add to Cart</span> 
+                        <span className="">Add to Cart</span>
                     </button>
 
                 </div>

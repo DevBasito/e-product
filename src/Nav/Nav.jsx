@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Images from "../asset";
 import Cart from "./Cart";
+import { useDispatch, useSelector } from "react-redux";
 
 
 const Nav = (props) => {
+    const { cartItems}  = useSelector(state => state.cart );
+
     const [showmenu, setShowmenu] = useState(false)
     const [showcart, setShowcart] = useState(false)
 
@@ -65,7 +68,7 @@ const Nav = (props) => {
                 </div>
                 <div className="basis-1/2 md:basis-1/4 flex flex-row justify-end md:justify-center  ">
                     <div className="basis 1/2 px-3 md:px-5  flex items-center">
-                        <span className="badge rounded-pill bg-Orange absolute top-2.5 hidden " id="badge">{props.badgeno}</span>
+                        <span className="badge rounded-pill bg-Orange absolute top-2.5 hidden " id="badge">{cartItems}</span>
                         <img src={Images.cart} alt="" onClick={openCart} />
                     </div>
                     <div className="basis 1/2 px-3 md:px-5 flex items-center"> <img src={Images.avatar} alt="" width={40} /></div>

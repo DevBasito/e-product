@@ -1,24 +1,14 @@
 import { React, useState } from "react";
 import Images from "../asset";
+import { useDispatch, useSelector } from "react-redux";
+import { cartMinus, cartPlus } from "../redux/cartItems";
 
 
-const ProductInfo = (props) => {
-    let [cartItems, setCartItems] = useState(0);
+const ProductInfo = () => {
 
-    const cartPlus = () => {
-        if (cartItems || cartItems == 0) {
-            setCartItems(++cartItems)
-        }
-    }
-
-    const cartMinus = () => {
-        if (cartItems == 0) {
-            setCartItems(0)
-        } else {
-            setCartItems(--cartItems);
-        }
-    }
-
+    const { cartItems}  = useSelector(state => state.cart );
+    const dispatch = useDispatch();
+    
     const addToCart = () => {
         let badge = document.getElementById("badge");
         if (cartItems == 0) {
@@ -53,11 +43,11 @@ const ProductInfo = (props) => {
                 <div className="my-4 text-center md:hidden">
 
                     <span className="bg-Lightgrey rounded-lg  py-3 mr-3 mx-auto ">
-                        <button className=" px-4 " onClick={cartMinus}><img src={Images.minus} alt="" /></button>
+                        <button className=" px-4 " onClick={() => dispatch(cartMinus())}><img src={Images.minus} alt="" /></button>
 
                         <span className="px-5  ">{cartItems}</span>
 
-                        <button className=" px-4 " onClick={cartPlus}><img src={Images.plus} alt="" /></button>
+                        <button className=" px-4 " onClick={() => dispatch(cartPlus())}><img src={Images.plus} alt="" /></button>
 
                     </span>
 
@@ -76,11 +66,11 @@ const ProductInfo = (props) => {
                 <div className="my-4 hidden md:block">
 
                     <span className="bg-Lightgrey rounded-lg  py-3 mr-3  ">
-                        <button className=" px-4 " onClick={cartMinus}><img src={Images.minus} alt="" /></button>
+                        <button className=" px-4 " onClick={() => dispatch(cartMinus())}><img src={Images.minus} alt="" /></button>
 
                         <span className="px-3 md:px-3 ">{cartItems}</span>
 
-                        <button className=" px-4 " onClick={cartPlus}><img src={Images.plus} alt="" /></button>
+                        <button className=" px-4 " onClick={() => dispatch(cartPlus())}><img src={Images.plus} alt="" /></button>
 
                     </span>
 

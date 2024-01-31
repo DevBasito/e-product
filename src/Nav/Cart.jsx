@@ -3,6 +3,7 @@ import Images from "../asset";
 import { useDispatch, useSelector } from "react-redux";
 import cartItems from "../redux/cartItems";
 import { useEffect } from "react";
+import Modal from "../Modal/modal";
 
 const Cart = () => {
     const { cartItems}  = useSelector(state => state.cart );
@@ -36,7 +37,7 @@ const Cart = () => {
                 </div>
 
                 <div className="my-3 text-center px-3">
-                    <button className="bg-Orange rounded-lg  py-3 w-full text-white " data-bs-toggle="modal" data-bs-target="#myModal"> Checkout </button>
+                    <button className="bg-Orange rounded-lg  py-3 w-full text-white" data-bs-toggle="modal" data-bs-target="#myModal"> Checkout </button>
 
                 </div>
 
